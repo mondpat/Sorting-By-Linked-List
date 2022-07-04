@@ -32,7 +32,7 @@ class LinkedList:
         self.begin = self.begin.next
         return delete
 
-    def display(self):
+    def DisplayAndDelete(self):
         if(self.begin == None):
             return 0
         temp = self.begin
@@ -58,4 +58,4 @@ def InsertNumbersFromInputToLinekdList():
 
 stack = LinkedList()
 InsertNumbersFromInputToLinekdList()
-stack.display()
+stack.DisplayAndDelete()
