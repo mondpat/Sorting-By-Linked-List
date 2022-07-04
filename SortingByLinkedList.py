@@ -28,7 +28,7 @@ class LinkedList:
             delete = self.begin.val
             self.begin = None
             return delete
-        delete = self.begin.next.val
+        delete = self.begin.val
         self.begin = self.begin.next
         return delete
 
