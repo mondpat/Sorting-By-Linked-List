@@ -1,5 +1,5 @@
 # Sorting-By-Linked-List
-## EN (CZ belllow):
+## EN (CZ bellow):
 Cosnole program for sorting given numbers in ascending order using linked list.
 The project consists of a class Node, with an attribute value and a pointer to the next Node. And a class LinkedList that contains an attribute beginning, which is a pointer to its first node. The class LinkedList also contains some methods:
 - insert(value) To the temp variable is saved the beginning of the LinkedList and if "the beginning is empty (i.e. its address is None) or value of the new Node is lower or equal to value of the beginning" is true, then the beginning of the LinkedList is reconnected so that new beginning is pointing to the new Node and new Node will be pointing to the old beginning. If the condition is evaluated to false, then a loop which iterates through all Nodes until the current Node is pointing to any other Node, and the value of the new Node is greater than the value of the Node to which is pointed by the current one, is executed. Thanks to the loop, a place to insert the new Node is found and the LinkedList is reconnected - the new Node is pointing to the one whose value is higher, and the Node whose value is lower than the new Node value is pointing to the new one.
