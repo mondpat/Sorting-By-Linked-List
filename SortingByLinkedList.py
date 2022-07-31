@@ -64,5 +64,8 @@ def InsertNumbersFromInputToLinekdList():
             char = sys.stdin.read(1)
 
 stack = LinkedList()
+print("Welcome to the Sorting by Linked List program\n")
+print("Please enter the numbers you want to be sorted:")
 InsertNumbersFromInputToLinekdList()
+print("\nThe sorted numbers are:")
 stack.DisplayAndDelete()
