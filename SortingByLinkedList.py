@@ -1,7 +1,4 @@
-from logging.config import valid_ident
 import sys
-import tempfile
-from tkinter.messagebox import NO
 
 class Node:
     def __init__(self, val):
