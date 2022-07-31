@@ -1,4 +1,7 @@
+from logging.config import valid_ident
 import sys
+import tempfile
+from tkinter.messagebox import NO
 
 class Node:
     def __init__(self, val):
@@ -16,10 +19,7 @@ class LinkedList:
             new.next = self.begin
             self.begin = new
         else:
-            while(temp.next != None and new.val > temp.next.val):
-                temp = temp.next
-            new.next = temp.next
-            temp.next = new
+            InsertNewNodeWhenHeadIsNotEmpty(temp, new)
 
     def delete(self):
         if(self.begin == None):
@@ -40,6 +40,13 @@ class LinkedList:
             print(temp.val, end=" ")
             stack.delete()
             temp = temp.next
+    
+def InsertNewNodeWhenHeadIsNotEmpty(tempNode: Node, newNode: Node):
+        if tempNode.next != None and tempNode.next.val < newNode.val:
+            InsertNewNodeWhenHeadIsNotEmpty(tempNode.next, newNode)
+        else:
+            newNode.next = tempNode.next
+            tempNode.next = newNode
 
 def InsertNumbersFromInputToLinekdList():
     char = sys.stdin.read(1)
